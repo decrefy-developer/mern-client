@@ -1,20 +1,15 @@
 import React, { useState, useContext } from 'react'
 import { Icon, Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import { useSubscription } from '@apollo/client'
 
 import { AuthContext } from '../context/auth'
-import { COMMENT_SUBSCRIPTION } from '../utils/subscription'
 
 function MenuBar() {
     const { logout, user } = useContext(AuthContext)
     const pathName = window.location.pathname
     const path = pathName === '/' ? 'home' : pathName.substr(1)
     const [activeItem, setActiveItem] = useState(path)
-    const [notificationCount, setNotificationCount] = useState(0)
     const handleItemClick = (e, { name }) => setActiveItem(name)
-
-    // const { loading, data } = useSubscription(COMMENT_SUBSCRIPTION)
 
 
     const menuBar = user ? (
@@ -33,9 +28,9 @@ function MenuBar() {
                     />
                     <Menu.Item>
                         <Icon name='bell outline' style={{ fontSize: '20px' }} />
-                        {
+                        {/* {
                             (notificationCount === 0) ? "" : (<span className="badge">{notificationCount}</span>)
-                        }
+                        } */}
                     </Menu.Item>
                 </Menu.Menu>
             </Menu>
