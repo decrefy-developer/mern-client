@@ -1,0 +1,36 @@
+.page-title{
+    display: block !important;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.red{
+    background-color: red;
+}
+
+.form-container{
+    width: 400px;
+    margin: auto;
+}
+
+/* .ui.teal.button:focus, .ui.teal.buttons.button:focus{
+    background-color: #009c95;
+} */
+
+.badge{
+    background-color: #db5565;
+    padding: 3px 5px 2px;
+    position: absolute;
+    top: 10px;
+    right: 21px;
+    display: inline-block;
+    min-width: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px;
+}
