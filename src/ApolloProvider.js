@@ -10,7 +10,7 @@ import { getMainDefinition } from 'apollo-utilities'
 import App from './App'
 
 const wsLink = new WebSocketLink({
-    uri: `ws://10.10.8.26:5000/graphql`,
+    uri: `ws://cryptic-fjord-40676.herokuapp.com/graphql`,
     options: {
         reconnect: true
     },
@@ -26,7 +26,7 @@ wsLink.subscriptionClient.on("connected", () => {
 });
 
 const httpLink = new createHttpLink({
-    uri: 'http://10.10.8.26:5000'
+    uri: 'https://cryptic-fjord-40676.herokuapp.com/'
 })
 
 const splitLink = split(
